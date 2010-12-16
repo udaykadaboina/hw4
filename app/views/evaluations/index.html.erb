@@ -1,0 +1,57 @@
+<h1>Listing evaluations</h1>
+
+<table>
+  <tr>
+    <th>Member</th>
+    <th>Met your expectations</th>
+    <th>Comment1</th>
+    <th>Quality of meals and snacks</th>
+    <th>Comment2</th>
+    <th>Seminar room and facilities</th>
+    <th>Comment3</th>
+    <th>Presentation style</th>
+    <th>Comment4</th>
+    <th>Pace of instruction was appropriate for learning goals</th>
+    <th>Comment5</th>
+    <th>Able to effectively answer questions</th>
+    <th>Comment6</th>
+    <th>Clearly written and mistake free</th>
+    <th>Comment7</th>
+    <th>Sufficient detail for the topics covered</th>
+    <th>Comment8</th>
+    <th>Additional comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @evaluations.each do |evaluation| %>
+  <tr>
+    <td><%= evaluation.member_id %></td>
+    <td><%= evaluation.met_your_expectations %></td>
+    <td><%= evaluation.comment1 %></td>
+    <td><%= evaluation.quality_of_meals_and_snacks %></td>
+    <td><%= evaluation.comment2 %></td>
+    <td><%= evaluation.seminar_room_and_facilities %></td>
+    <td><%= evaluation.comment3 %></td>
+    <td><%= evaluation.presentation_style %></td>
+    <td><%= evaluation.comment4 %></td>
+    <td><%= evaluation.pace_of_instruction_was_appropriate_for_learning_goals %></td>
+    <td><%= evaluation.comment5 %></td>
+    <td><%= evaluation.able_to_effectively_answer_questions %></td>
+    <td><%= evaluation.comment6 %></td>
+    <td><%= evaluation.clearly_written_and_mistake_free %></td>
+    <td><%= evaluation.comment7 %></td>
+    <td><%= evaluation.sufficient_detail_for_the_topics_covered %></td>
+    <td><%= evaluation.comment8 %></td>
+    <td><%= evaluation.additional_comments %></td>
+    <td><%= link_to 'Show', evaluation %></td>
+    <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+    <td><%= link_to 'Destroy', evaluation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Evaluation', new_evaluation_path %>

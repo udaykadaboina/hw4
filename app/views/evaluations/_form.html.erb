@@ -1,0 +1,89 @@
+<%= form_for(@evaluation) do |f| %>
+  <% if @evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+      <% @evaluation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :member_id %><br />
+    <%= f.text_field :member_id %>
+  </div>
+  <div class="field">
+    <%= f.label :met_your_expectations %><br />
+    <%= f.text_field :met_your_expectations %>
+  </div>
+  <div class="field">
+    <%= f.label :comment1 %><br />
+    <%= f.text_area :comment1 %>
+  </div>
+  <div class="field">
+    <%= f.label :quality_of_meals_and_snacks %><br />
+    <%= f.text_field :quality_of_meals_and_snacks %>
+  </div>
+  <div class="field">
+    <%= f.label :comment2 %><br />
+    <%= f.text_area :comment2 %>
+  </div>
+  <div class="field">
+    <%= f.label :seminar_room_and_facilities %><br />
+    <%= f.text_field :seminar_room_and_facilities %>
+  </div>
+  <div class="field">
+    <%= f.label :comment3 %><br />
+    <%= f.text_area :comment3 %>
+  </div>
+  <div class="field">
+    <%= f.label :presentation_style %><br />
+    <%= f.text_field :presentation_style %>
+  </div>
+  <div class="field">
+    <%= f.label :comment4 %><br />
+    <%= f.text_area :comment4 %>
+  </div>
+  <div class="field">
+    <%= f.label :pace_of_instruction_was_appropriate_for_learning_goals %><br />
+    <%= f.text_field :pace_of_instruction_was_appropriate_for_learning_goals %>
+  </div>
+  <div class="field">
+    <%= f.label :comment5 %><br />
+    <%= f.text_area :comment5 %>
+  </div>
+  <div class="field">
+    <%= f.label :able_to_effectively_answer_questions %><br />
+    <%= f.text_field :able_to_effectively_answer_questions %>
+  </div>
+  <div class="field">
+    <%= f.label :comment6 %><br />
+    <%= f.text_area :comment6 %>
+  </div>
+  <div class="field">
+    <%= f.label :clearly_written_and_mistake_free %><br />
+    <%= f.text_field :clearly_written_and_mistake_free %>
+  </div>
+  <div class="field">
+    <%= f.label :comment7 %><br />
+    <%= f.text_area :comment7 %>
+  </div>
+  <div class="field">
+    <%= f.label :sufficient_detail_for_the_topics_covered %><br />
+    <%= f.text_field :sufficient_detail_for_the_topics_covered %>
+  </div>
+  <div class="field">
+    <%= f.label :comment8 %><br />
+    <%= f.text_area :comment8 %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_comments %><br />
+    <%= f.text_area :additional_comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

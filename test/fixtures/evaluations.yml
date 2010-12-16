@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  member_id: 1
+  met_your_expectations: 1
+  comment1: MyText
+  quality_of_meals_and_snacks: 1
+  comment2: MyText
+  seminar_room_and_facilities: 1
+  comment3: MyText
+  presentation_style: 1
+  comment4: MyText
+  pace_of_instruction_was_appropriate_for_learning_goals: 1
+  comment5: MyText
+  able_to_effectively_answer_questions: 1
+  comment6: MyText
+  clearly_written_and_mistake_free: 1
+  comment7: MyText
+  sufficient_detail_for_the_topics_covered: 1
+  comment8: MyText
+  additional_comments: MyText
+
+two:
+  member_id: 1
+  met_your_expectations: 1
+  comment1: MyText
+  quality_of_meals_and_snacks: 1
+  comment2: MyText
+  seminar_room_and_facilities: 1
+  comment3: MyText
+  presentation_style: 1
+  comment4: MyText
+  pace_of_instruction_was_appropriate_for_learning_goals: 1
+  comment5: MyText
+  able_to_effectively_answer_questions: 1
+  comment6: MyText
+  clearly_written_and_mistake_free: 1
+  comment7: MyText
+  sufficient_detail_for_the_topics_covered: 1
+  comment8: MyText
+  additional_comments: MyText

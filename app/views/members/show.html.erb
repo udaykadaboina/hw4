@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @member.name %>
+</p>
+<h2>Evaluation Form</h2>
+
+<% form_for [@member, Evaluation.new] do |f| %>
+	<table>
+	    <tr><th>Seminar</th><th>Evaluation (5-1) 5=Excellent, 1=Poor</th><th>Comments</th></tr>
+	    <tr><td>Met your expectations</td><td><%= f.radio_button :met_your_expectations, '5' %>5<%= f.radio_button :met_your_expectations, '4' %>4<%= f.radio_button :met_your_expectations, '3' %>3<%= f.radio_button :met_your_expectations, '2' %>2<%= f.radio_button :met_your_expectations, '1' %>1</td><td><%= f.text_area :comment1 %></td></tr>
+	    <tr><td>Quality of meals and snacks</td><td><%= f.radio_button :quality_of_meals_and_snacks, '5' %>5<%= f.radio_button :quality_of_meals_and_snacks, '4' %>4<%= f.radio_button :quality_of_meals_and_snacks, '3' %>3<%= f.radio_button :quality_of_meals_and_snacks, '2' %>2<%= f.radio_button :quality_of_meals_and_snacks, '1' %>1</td><td><%= f.text_area :comment2 %></td></tr>
+	    <tr><td>Seminar room and facilities</td><td><%= f.radio_button :seminar_room_and_facilities, '5' %>5<%= f.radio_button :seminar_room_and_facilities, '4' %>4<%= f.radio_button :seminar_room_and_facilities, '3' %>3<%= f.radio_button :seminar_room_and_facilities, '2' %>2<%= f.radio_button :seminar_room_and_facilities, '1' %>1</td><td><%= f.text_area :comment3 %></td></tr>
+	    
+	    <tr><th>Instructor</th><th>Evaluation (5-1) 5=Excellent, 1=Poor</th><th>Comments</th></tr>
+	    <tr><td>Presentation style</td><td><%= f.radio_button :presentation_style, '5' %>5<%= f.radio_button :presentation_style, '4' %>4<%= f.radio_button :presentation_style, '3' %>3<%= f.radio_button :presentation_style, '2' %>2<%= f.radio_button :presentation_style, '1' %>1</td><td><%= f.text_area :comment4 %></td></tr>
+	    <tr><td>Pace of instruction was appropriate for learning goals</td><td><%= f.radio_button :pace_of_instruction_was_appropriate_for_learning_goals, '5' %>5<%= f.radio_button :pace_of_instruction_was_appropriate_for_learning_goals, '4' %>4<%= f.radio_button :pace_of_instruction_was_appropriate_for_learning_goals, '3' %>3<%= f.radio_button :pace_of_instruction_was_appropriate_for_learning_goals, '2' %>2<%= f.radio_button :pace_of_instruction_was_appropriate_for_learning_goals, '1' %>1</td><td><%= f.text_area :comment5 %></td></tr>
+	    <tr><td>Able to effectively answer questions</td><td><%= f.radio_button :able_to_effectively_answer_questions, '5' %>5<%= f.radio_button :able_to_effectively_answer_questions, '4' %>4<%= f.radio_button :able_to_effectively_answer_questions, '3' %>3<%= f.radio_button :able_to_effectively_answer_questions, '2' %>2<%= f.radio_button :able_to_effectively_answer_questions, '1' %>1</td><td><%= f.text_area :comment6 %></td></tr>
+	    
+	    <tr><th>Materials</th><th>Evaluation (5-1) 5=Excellent, 1=Poor</th><th>Comments</th></tr>
+	    <tr><td>Clearly written and mistake free</td><td><%= f.radio_button :clearly_written_and_mistake_free, '5' %>5<%= f.radio_button :clearly_written_and_mistake_free, '4' %>4<%= f.radio_button :clearly_written_and_mistake_free, '3' %>3<%= f.radio_button :clearly_written_and_mistake_free, '2' %>2<%= f.radio_button :clearly_written_and_mistake_free, '1' %>1</td><td><%= f.text_area :comment7 %></td></tr>
+	    <tr><td>Sufficient detail for the topics covered</td><td><%= f.radio_button :sufficient_detail_for_the_topics_covered, '5' %>5<%= f.radio_button :sufficient_detail_for_the_topics_covered, '4' %>4<%= f.radio_button :sufficient_detail_for_the_topics_covered, '3' %>3<%= f.radio_button :sufficient_detail_for_the_topics_covered, '2' %>2<%= f.radio_button :sufficient_detail_for_the_topics_covered, '1' %>1</td><td><%= f.text_area :comment8 %></td></tr>
+	    <tr><th>Additional Comments</th><td><%= f.text_area :additional_comments %></td><td></td></tr>
+            <tr><td></td><td><%= f.submit "Submit" %></td><td></td></tr>
+	</table>
+<% end %>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>
