@@ -24,12 +24,12 @@ class EvaluationsController < ApplicationController
   # GET /evaluations/new
   # GET /evaluations/new.xml
   def new
-    @evaluation = Evaluation.new
+   @evaluation = Evaluation.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @evaluation }
-    end
+   respond_to do |format|
+     format.html # new.html.erb
+     format.xml  { render :xml => @evaluation }
+   end
   end
 
   # GET /evaluations/1/edit
