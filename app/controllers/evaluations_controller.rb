@@ -40,7 +40,7 @@ class EvaluationsController < ApplicationController
   # POST /evaluations
   # POST /evaluations.xml
   def create
-    @member = Member.find(params[member_id])
+    @member = Member.find(params[:member_id])
     @evaluation = @member.evaluations.create!(params[:evaluation])
 
     respond_to do |format|
